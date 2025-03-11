@@ -1,3 +1,5 @@
+
+
 package com.contact.contactlist.Controller;
 
 import java.util.*;
@@ -21,7 +23,7 @@ import com.contact.contactlist.model.User;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(origins = "https://contactaddlist-reactjs.vercel.app/", allowCredentials = "true")
 public class ContactController {
 
 	@Autowired
