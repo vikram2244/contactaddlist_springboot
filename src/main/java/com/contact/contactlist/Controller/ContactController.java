@@ -23,7 +23,7 @@ import com.contact.contactlist.model.User;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(origins = "*", allowCredentials = "true")
 public class ContactController {
 
 	@Autowired
