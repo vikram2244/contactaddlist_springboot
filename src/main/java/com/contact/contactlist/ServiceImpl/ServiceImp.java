@@ -59,7 +59,7 @@ public class ServiceImp implements UserService {
 	    return emailExists;
 	}
 	@Override
-    public List<ContactPage> allContacts(String email) {
+    public String allContacts(String email) {
         List<ContactPage> contacts = contactRepo.findByEmailId(email);
         if (!contacts.isEmpty()) {
             user_email = email; 
@@ -67,7 +67,7 @@ public class ServiceImp implements UserService {
             user_email = null; 
         }
         contacts.forEach(System.out::println);
-        return contacts;
+        return contacts.toString();
     }
 
 

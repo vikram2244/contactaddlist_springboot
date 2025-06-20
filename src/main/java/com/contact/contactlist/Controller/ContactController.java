@@ -1,5 +1,3 @@
-
-
 package com.contact.contactlist.Controller;
 
 import java.util.*;
@@ -63,8 +61,8 @@ public class ContactController {
     }
 
     @GetMapping("/contacts/{email}")
-    public ResponseEntity<List<ContactPage>> allContacts( @PathVariable String email) {
-        List<ContactPage> contacts = userService.allContacts(email);
+    public ResponseEntity<String> allContacts( @PathVariable String email) {
+        String contacts = userService.allContacts(email);
         if (!contacts.isEmpty()) {
             return ResponseEntity.ok(contacts);
         } else {
