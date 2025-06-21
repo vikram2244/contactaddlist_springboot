@@ -16,7 +16,7 @@ import com.contact.contactlist.model.User;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "https://contactaddlist-springboot.onrender.com", allowCredentials = "true")
+@CrossOrigin(origins = "https://contactsvikky.netlify.app", allowCredentials = "true")
 public class UserController {
 
     @Autowired
