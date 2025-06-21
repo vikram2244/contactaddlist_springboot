@@ -59,16 +59,9 @@ public class ServiceImp implements UserService {
 	    return emailExists;
 	}
 	@Override
-    public String allContacts(String email) {
-        List<ContactPage> contacts = contactRepo.findByEmailId(email);
-        if (!contacts.isEmpty()) {
-            user_email = email; 
-        } else {
-            user_email = null; 
-        }
-        contacts.forEach(System.out::println);
-        return contacts.toString();
-    }
+	public List<ContactPage> allContacts(String email) {
+	    return contactRepo.findByEmailId(email);
+	}
 
 
 	@Override

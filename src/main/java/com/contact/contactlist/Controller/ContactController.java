@@ -60,9 +60,9 @@ public class ContactController {
     }
 
     @GetMapping("/contacts/{email}")
-    public ResponseEntity<String> allContacts( @PathVariable String email) {
-        String contacts = userService.allContacts(email);
-        if (!contacts.isEmpty()) {
+    public ResponseEntity<List<ContactPage>> allContacts(@PathVariable String email) {
+        List<ContactPage> contacts = userService.allContacts(email);
+        if (contacts != null && !contacts.isEmpty()) {
             return ResponseEntity.ok(contacts);
         } else {
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();

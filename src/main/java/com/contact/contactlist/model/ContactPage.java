@@ -1,12 +1,16 @@
 package com.contact.contactlist.model;
 
 import java.sql.Date;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "contacts")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ContactPage {
 
     @Id

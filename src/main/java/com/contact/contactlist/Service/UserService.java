@@ -15,6 +15,6 @@ public interface UserService {
     User createUser(User user);
     Boolean checkReg(User user);
 	ContactPage createContact(ContactPage contactpage);
-	String allContacts( String email);
+	List<ContactPage> allContacts( String email);
 	void deleteUser(String id);
 }

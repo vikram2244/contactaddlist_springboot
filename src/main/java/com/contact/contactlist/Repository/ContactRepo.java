@@ -14,7 +14,6 @@ public interface ContactRepo extends JpaRepository<ContactPage, String> { // Cha
 
     @Query("SELECT c FROM ContactPage c WHERE c.email = :email")
     List<ContactPage> findByEmailId(@Param("email") String email);
-
     void deleteAllById(String id);
 }
 
