@@ -16,7 +16,6 @@ import com.contact.contactlist.model.User;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "https://contactsvikky.netlify.app", allowCredentials = "true")
 public class UserController {
 
     @Autowired
